@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MiniGPT HF</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- PANEL LATERAL -->
+
+        <aside class="panel">
+
+            <div class="brand">
+
+                <div class="logo">
+                    
+                </div>
+
+                <div>
+
+                    <h1>MiniGPT HF</h1>
+
+                    <p>
+                        Chat inteligente conectado a Hugging Face.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- MODO -->
+
+            <label for="mode">
+
+                Modo del asistente
+
+            </label>
+
+            <select id="mode">
+
+                <option value="web">
+                     Profesor de Desarrollo Web
+                </option>
+
+                <option value="english">
+                    🇺🇸 Tutor de Inglés
+                </option>
+
+                <option value="debug">
+                     Depurador de Código
+                </option>
+
+            </select>
+
+            <!-- MODELOS -->
+
+            <label for="model">
+
+                Modelo de IA
+
+            </label>
+
+            <select id="model">
+
+                <option value="meta-llama/Llama-3.1-8B-Instruct">
+                     Llama 3.1 8B
+                </option>
+
+                <option value="mistralai/Mistral-7B-Instruct-v0.3">
+                     Mistral 7B
+                </option>
+
+                <option value="Qwen/Qwen3-8B">
+                     Qwen 3 8B
+                </option>
+
+                <option value="deepseek-ai/DeepSeek-R1">
+                     DeepSeek R1
+                </option>
+
+                <option value="google/gemma-3-12b-it">
+                     Gemma 3 12B
+                </option>
+
+                <option value="microsoft/Phi-4">
+                     Phi-4
+                </option>
+
+                <option value="TinyLlama/TinyLlama-1.1B-Chat-v1.0">
+                     TinyLlama
+                </option>
+
+            </select>
+
+            <!-- INFORMACIÓN DEL MODELO -->
+
+            <div class="model-card">
+
+                <h3>
+
+                    Modelo seleccionado
+
+                </h3>
+
+                <div id="modelName">
+
+                    🦙 Llama 3.1 8B
+
+                </div>
+
+                <div id="modelDescription">
+
+                    Excelente para programación y razonamiento.
+
+                </div>
+
+            </div>
+
+            <!-- ESTADO -->
+
+            <div class="status-card">
+
+                <h3>
+
+                    Estado
+
+                </h3>
+
+                <p>
+
+                    🟢 Backend conectado
+
+                </p>
+
+                <p>
+
+                    Provider:
+                    <strong>Hugging Face</strong>
+
+                </p>
+
+            </div>
+
+            <button id="clearBtn">
+
+                🗑 Limpiar conversación
+
+            </button>
+
+        </aside>
+
+        <!-- CHAT -->
+
+        <section class="chat">
+
+            <header class="chat-header">
+
+                <div>
+
+                    <h2>
+
+                        MiniGPT HF
+
+                    </h2>
+
+                    <span>
+
+                        Conversación Inteligente
+
+                    </span>
+
+                </div>
+
+                <div class="chat-model">
+
+                    <span>
+
+                        Modelo activo
+
+                    </span>
+
+                    <strong id="activeModel">
+
+                        🦙 Llama 3.1
+
+                    </strong>
+
+                </div>
+
+            </header>
+
+            <div id="messages" class="messages"></div>
+
+            <form id="chatForm" class="composer">
+
+                <textarea
+                    id="prompt"
+                    rows="2"
+                    placeholder="Escribe aquí tu pregunta..."></textarea>
+
+                <button type="submit">
+
+                    ➜ Enviar
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
