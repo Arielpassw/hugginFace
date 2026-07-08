@@ -9,6 +9,7 @@ El usuario puede seleccionar tanto el **modo del asistente** como el **modelo de
 
 # Vista del Proyecto
 
+
 <img width="1368" height="963" alt="image" src="https://github.com/user-attachments/assets/3cb1bea6-62cc-42b2-95ac-eda71d0706d4" />
 
 ---
